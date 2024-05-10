@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-react-app
+  name: react-first-app
 spec:
   selector:
     matchLabels:
-      app: my-react-app
+      app: react-first-app
   replicas: 1
   template:
     metadata:
       labels:
-        app: my-react-app
+        app: react-first-app
     spec:
       containers:
-        - name: my-react-app
-          image: my-react-app
+        - name: react-first-app
+          image: react-first-app
           imagePullPolicy: Never
           ports:
             - containerPort: 80
