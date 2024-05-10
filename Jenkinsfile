@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/a3innoark/react-router-auth.git'        
+        git 'https://github.com/werdnas/my-react-app.git'        
       }
     }
 
