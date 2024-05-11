@@ -15,6 +15,6 @@ spec:
       containers:
         - name: react-first-app
           image: react-first-app
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
