@@ -1,20 +1,26 @@
 pipeline {
 
-  environment {
+environment {
     dockerimagename = "react-first-app"
     dockerImage = ""
   }
+  
+    agent any 
 
-  agent any
+
 
   stages {
 
-    stage('Checkout Source') {
-      steps {
-        git 'https://github.com/werdnas/my-react-app.git'        
-      }
-    }
+    stage('Clone repository') {
 
+      steps {
+
+        git 'https://github.com/werdnas/my-react-app.git'
+
+      }
+
+    }
+    
     stage('Build image') {
       steps{
         script {
@@ -23,25 +29,23 @@ pipeline {
       }
     }
 
-    stage('Pushing Image') {
-      environment {
-               registryCredential = 'docker-hub-andrews.gs'
-           }
-      steps{
-        script {
-          docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
-            dockerImage.push("latest")
-          }
-        }
-      }
-    }
 
-    stage('Deploying React.js container to Kubernetes') {
+
+    stage('Deploy to Kubernetes') {
+
       steps {
-        script {
-          kubernetesDeploy(configs: "deployment.yaml", "service.yaml")
-        }
+
+        kubernetesDeploy(
+
+          configs: 'deployment.yaml,service.yaml',
+
+          kubeconfigId: 'my-kubeconfig'
+
+        )
+        
+
       }
+
     }
 
   }
