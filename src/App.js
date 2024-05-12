@@ -24,7 +24,7 @@ function App(props) {
             <Link to="/">Home Page</Link>
           </li>
           <li>
-            <Link to="/admin">Admin Page</Link>
+            <Link to="/admin">Admin Page-1</Link>
           </li>
         </ul>
           <Route exact path="/" component={Home} />
