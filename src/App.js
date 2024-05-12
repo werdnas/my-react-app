@@ -21,7 +21,7 @@ function App(props) {
         <div>
         <ul>
           <li>
-            <Link to="/">Home Page</Link>
+            <Link to="/">Home Page-1</Link>
           </li>
           <li>
             <Link to="/admin">Admin Page-1</Link>
