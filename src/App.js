@@ -21,10 +21,10 @@ function App(props) {
         <div>
         <ul>
           <li>
-            <Link to="/">Home Page-1</Link>
+            <Link to="/">Home Page-webhook</Link>
           </li>
           <li>
-            <Link to="/admin">Admin Page-1</Link>
+            <Link to="/admin">Admin Page-webhook</Link>
           </li>
         </ul>
           <Route exact path="/" component={Home} />
