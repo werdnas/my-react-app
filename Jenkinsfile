@@ -1,7 +1,7 @@
 pipeline {
 
 environment {
-    dockerimagename = "react-app"
+    dockerimagename = "a3-auth-frontend"
     dockerImage = ""
   }
   

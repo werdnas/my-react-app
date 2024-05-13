@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: react-app-service
+  name: a3-auth-frontend-service
 spec:
   selector:
-    app: react-app
+    app: a3-auth-frontend
   ports:
     - protocol: TCP
-      port: 9092
+      port: 9095
       targetPort: 80
   type: NodePort
