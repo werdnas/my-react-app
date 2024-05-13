@@ -21,10 +21,10 @@ function App(props) {
         <div>
         <ul>
           <li>
-            <Link to="/">Home Page-wh-test</Link>
+            <Link to="/">Home Page-test</Link>
           </li>
           <li>
-            <Link to="/admin">Admin Page-wh-test</Link>
+            <Link to="/admin">Admin Page-test</Link>
           </li>
         </ul>
           <Route exact path="/" component={Home} />
