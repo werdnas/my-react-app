@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: a3-auth-frontend
-          image: aandrewsk8s/3-auth-frontend:latest
+          image: andrewsk8s/3-auth-frontend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
