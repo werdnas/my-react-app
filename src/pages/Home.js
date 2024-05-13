@@ -1,7 +1,7 @@
 import React from "react";
 
 function Home(props) {
-  return <div>Home Page - reload testing</div>;
+  return <div>Home Page - recreate testng</div>;
 }
 
 export default Home;
