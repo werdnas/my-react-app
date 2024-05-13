@@ -1,7 +1,7 @@
 pipeline {
 
 environment {
-    dockerimagename = "a3-auth-frontend"
+    dockerimagename = "andrewsk8s/a3-auth-frontend"
     dockerImage = ""
   }
   
@@ -28,6 +28,22 @@ environment {
         }
       }
     }
+	
+	
+    stage('Pushing Image') {
+      environment {
+               //registryCredential = 'docker-hub-andrews.gs'
+               registryCredential = 'dockerhub-andrews.kubernetes'
+           }
+      steps{
+        script {
+            docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
+            dockerImage.push("latest")
+          }
+        }
+      }
+    }
+
 
 
 
