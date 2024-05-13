@@ -7,6 +7,6 @@ spec:
     app: my-react-app
   ports:
     - protocol: TCP
-      port: 9092
+      port: 9093
       targetPort: 80
   type: NodePort
