@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: react-first-app-service
+  name: my-react-app-service
 spec:
   selector:
-    app: react-first-app
+    app: my-react-app
   ports:
     - protocol: TCP
-      port: 9091
+      port: 9093
       targetPort: 80
   type: NodePort

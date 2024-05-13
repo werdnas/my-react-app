@@ -11,7 +11,7 @@ function Admin(props) {
 
   return (
     <div>
-      <div>Admin Page</div>
+      <div>Admin Page - webhook test</div>
       <Button onClick={logOut}>Log out</Button>
     </div>
   );
