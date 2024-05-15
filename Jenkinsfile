@@ -3,7 +3,7 @@ pipeline {
     agent any 
 
 
-
+  stages {
 
     stage('Deploy to Kubernetes') {
 
@@ -24,4 +24,5 @@ pipeline {
 
     }
 
+  }
 }
