@@ -55,7 +55,9 @@ environment {
 
           configs: 'deployment.yaml,service.yaml',
 
-          kubeconfigId: 'my-kubeconfig'
+          //kubeconfigId: 'my-kubeconfig'
+	  kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG'
+		
 
         )
         
